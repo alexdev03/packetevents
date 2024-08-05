@@ -11,7 +11,9 @@ tasks {
         archiveFileName = "packetevents-${project.name}-${rootProject.ext["versionNoHash"]}.jar"
         archiveClassifier = null
 
-        relocate("net.kyori.adventure.text.serializer", "io.github.retrooper.packetevents.adventure.serializer")
+        relocate("net.kyori.adventure.text.serializer.gson", "io.github.retrooper.packetevents.adventure.serializer.gson")
+        relocate("net.kyori.adventure.text.serializer.json", "io.github.retrooper.packetevents.adventure.serializer.json")
+        relocate("net.kyori.adventure.text.serializer.legacy", "io.github.retrooper.packetevents.adventure.serializer.legacy")
         relocate("net.kyori.option", "io.github.retrooper.packetevents.adventure.option")
         dependencies {
             exclude(dependency("com.google.code.gson:gson:.*"))
